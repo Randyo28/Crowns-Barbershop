@@ -4,7 +4,7 @@ A responsive website mockup for Crowns Hair Salon & BarberShop.
 
 ## Open the mockup
 
-Open `outputs/crowns-barbershop-mockup.html` in a browser.
+Open `Src/crowns-barbershop.html` in a browser.
 
 ## Included
 
