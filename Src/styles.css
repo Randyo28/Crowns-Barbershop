@@ -388,7 +388,7 @@ section {
    display:grid;
    grid-template-columns:1.2fr 1.15fr .9fr auto;
    gap:28px;
-   align-items:center;
+   align-items:start;
    padding:27px 0;
    border-bottom:1px solid rgba(201,162,90,.25);
 }
@@ -603,6 +603,32 @@ footer {
    font-size:.91rem;
 }
 
+.booking__instructions {
+   color:#625b52;
+   line-height:1.65;
+}
+
+.booking__action-grid {
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   gap:12px;
+   margin-top:22px;
+}
+
+.booking__action-grid .button {
+   text-align:center;
+}
+
+.button--outline {
+   background:transparent;
+   color:#34240e;
+   border:1px solid #a47c37;
+}
+
+.button--outline:hover {
+   background:#f7edda;
+}
+
 /* Mobile layout */
 @media (max-width:760px) {
    nav {
@@ -707,6 +733,10 @@ footer {
   }
 
 .booking__choice-grid {
+     grid-template-columns:1fr;
+  }
+
+  .booking__action-grid {
      grid-template-columns:1fr;
   }
 
