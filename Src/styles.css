@@ -509,8 +509,15 @@ footer {
 }
 
 .footer__brand {
+   display:flex;
+   align-items:center;
    color:var(--paper);
    font:400 1.3rem Georgia,serif;
+}
+
+.footer__brand .site-brand__logo {
+   width:72px;
+   height:72px;
 }
 
 /* Booking modal */
