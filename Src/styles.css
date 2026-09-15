@@ -226,6 +226,14 @@ section {
    color:var(--gold);
 }
 
+.services__header > .eyebrow {
+   font-size:1.35rem;
+   line-height:1;
+   letter-spacing:0;
+   margin-bottom:13px;
+   text-shadow:0 0 12px rgba(201,162,90,.55);
+}
+
 .services__subtitle {
    color:#c7c0b5;
    margin:12px 0 35px;
