@@ -12,6 +12,8 @@
     <a class="site-brand" href="#top" aria-label="Crowns home"><img class="site-brand__logo" src="assets/crowns-logo-round.jpg" alt="Crowns Hair Salon & BarberShop"></a>
     <div class="nav-links"><a href="#services">Services</a><a href="#barbers">Barbers</a><a href="#locations">Locations</a><a href="#gallery">Gallery</a></div>
     <a class="nav-call-button" href="tel:+15551234567">Call now</a>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg class="mobile-menu-toggle__icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path class="mobile-menu-toggle__crown" d="M10 16 15 25 24 14 33 25 38 16 35 31H13Z"></path><path class="mobile-menu-toggle__line" d="M14 36h20M14 41h20"></path></svg></button>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><a href="#services">Services</a><a href="#barbers">Barbers</a><a href="#locations">Locations</a><a href="#gallery">Gallery</a><a class="mobile-menu__call" href="tel:+15551234567">Call now</a></div>
   </nav>
 
   <main id="top">
@@ -51,6 +53,12 @@
     <div class="step" id="confirm-step"><button class="back" onclick="showStep('barber-step')">← Change barber</button><div class="eyebrow">Almost there</div><h2>Send your request.</h2><div class="booking__summary" id="summary"></div><p class="booking__instructions">Call us to request an appointment, or send a text with your details already included. Add your preferred date and time before sending.</p><div class="booking__action-grid"><a class="button" id="call" href="tel:+15551234567">Call now</a><a class="button button--outline" id="sms" href="#">Text via SMS</a></div></div>
   </div></div>
   <script>
+    const menuToggle=document.querySelector('.mobile-menu-toggle');
+    const mobileMenu=document.getElementById('mobile-menu');
+    function setMobileMenu(open){document.querySelector('nav').classList.toggle('menu-open',open);menuToggle.setAttribute('aria-expanded',String(open));menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu');mobileMenu.setAttribute('aria-hidden',String(!open));}
+    menuToggle.addEventListener('click',()=>setMobileMenu(!document.querySelector('nav').classList.contains('menu-open')));
+    mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMobileMenu(false)));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')setMobileMenu(false)});
     let selectedLocation='', selectedBarber='';
     const steps=['location-step','barber-step','confirm-step'];
     function showStep(id){steps.forEach(s=>document.getElementById(s).classList.toggle('active',s===id));}
