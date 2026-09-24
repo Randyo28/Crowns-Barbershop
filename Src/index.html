@@ -3,11 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=./crowns-barbershop.html">
-  <title>Crowns Barbershop</title>
-  <script>location.replace("./crowns-barbershop.html")</script>
+  <title>Crowns — Hair Salon & BarberShop</title>
+  <meta name="description" content="Crowns Hair Salon & BarberShop website mockup.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p><a href="./crowns-barbershop.html">Open Crowns Barbershop</a></p>
+  <nav>
+    <a class="site-brand" href="#top" aria-label="Crowns home"><img class="site-brand__logo" src="assets/crowns-logo-round.jpg" alt="Crowns Hair Salon & BarberShop"></a>
+    <div class="nav-links"><a href="#services">Services</a><a href="#barbers">Barbers</a><a href="#locations">Locations</a><a href="#gallery">Gallery</a></div>
+    <a class="nav-call-button" href="tel:+15551234567">Call now</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__content"><div class="eyebrow">♛ &nbsp; Premium cuts. Sharp looks.</div><h1 class="serif">Your style.<br>Your <em>crown.</em></h1><p>At Crowns, we don’t just cut hair — we build confidence. Walk in, leave like royalty.</p><a class="button" href="tel:+15551234567">Call now</a></div>
+      <div class="hero__highlights"><span><b>☆</b> Expert barbers</span><span><b>✦</b> Premium products</span><span><b>♜</b> Relaxed atmosphere</span><span><b>◇</b> Satisfaction guaranteed</span></div>
+    </section>
+
+    <section class="services" id="services"><div class="services__header"><div class="eyebrow">♛</div><h2 class="section-title serif">Our services</h2><p class="services__subtitle">Quality cuts &amp; grooming for every style.</p></div><div class="services__grid">
+      <article class="service"><div class="service-icon">✂</div><h3>Haircut</h3><div class="price">$30+</div><p>Classic cuts, tapers, fades &amp; more.</p></article>
+      <article class="service"><div class="service-icon">♧</div><h3>Beard trim</h3><div class="price">$20+</div><p>Shape up your beard to perfection.</p></article>
+      <article class="service"><div class="service-icon">♜</div><h3>Shave</h3><div class="price">$25+</div><p>Hot towel shave for a clean finish.</p></article>
+      <article class="service"><div class="service-icon">♛</div><h3>Kids cut</h3><div class="price">$20+</div><p>Fresh looks for the young kings.</p></article>
+    </div><a class="button-link" href="#locations">View all services</a></section>
+
+    <section class="about" id="about"><div class="about__image" role="img" aria-label="Crowns barbershop interior"></div><div class="about__content"><div class="eyebrow">About Crowns</div><h2 class="serif">A place where style meets tradition.</h2><p>We’re more than a barbershop — we’re a place for top-notch service in a welcoming environment. You wear the crown; we make sure it fits.</p><a class="button-link" href="#locations">Find your location</a></div></section>
+
+    <section class="locations" id="locations"><div class="locations__header"><div><div class="eyebrow">Find your Crowns</div><h2 class="section-title serif">Your chair is waiting.</h2></div></div><div class="locations__grid">
+      <article class="location"><div class="eyebrow">Location 01</div><h3>Lindenwood</h3><p>1376 Loring Ave<br>Brooklyn, NY 11208<br>(555) 123-4567</p><div class="location__meta"><div><b>Hours</b><br>Mon–Sat: 10–8<br>Sun: 10–7</div><div><b>Parking</b><br>Street parking<br>only</div></div><button class="button" onclick="openBooking('Lindenwood')">Book Lindenwood</button></article>
+      <article class="location"><div class="eyebrow">Location 02</div><h3>Nostrand</h3><p>Brooklyn, NY 11210<br>(555) 987-6543</p><div class="location__meta"><div><b>Hours</b><br>Mon–Sat: 9–7<br>Sun: 10–4</div><div><b>Parking</b><br>Street parking<br>only</div></div><button class="button" onclick="openBooking('Nostrand')">Book Nostrand</button></article>
+    </div></section>
+
+    <section class="barbers" id="barbers"><div class="eyebrow">Meet the team</div><h2 class="section-title serif">The Crowns roster.</h2><div class="roster">
+      <article class="roster__row"><div><div class="roster__name">Marcus</div><div class="roster__title">Master Barber</div></div><div class="roster__detail"><span class="roster__label">Specialties</span>Fades · Haircuts · Beard work</div><div class="roster__detail"><span class="roster__label">Available</span>Tuesday – Saturday</div><button class="button-link" onclick="openBooking(null,'Marcus')">Book Marcus →</button></article>
+      <article class="roster__row"><div><div class="roster__name">Jay</div><div class="roster__title">Barber</div></div><div class="roster__detail"><span class="roster__label">Specialties</span>Texture · Tapers · Precision cuts</div><div class="roster__detail"><span class="roster__label">Available</span>Wednesday – Sunday</div><button class="button-link" onclick="openBooking(null,'Jay')">Book Jay →</button></article>
+      <article class="roster__row"><div><div class="roster__name">Chris</div><div class="roster__title">Barber</div></div><div class="roster__detail"><span class="roster__label">Specialties</span>Classic cuts · Shaves · Hot towels</div><div class="roster__detail"><span class="roster__label">Available</span>Monday – Friday</div><button class="button-link" onclick="openBooking(null,'Chris')">Book Chris →</button></article>
+    </div></section>
+
+    <section class="gallery" id="gallery"><div class="tile" role="img" aria-label="Crowns barber chair" style="--tile:url('assets/crowns-wall-chair.png')"></div><div class="tile" role="img" aria-label="Crowns salon interior" style="--tile:url('assets/crowns-wall-interior.png')"></div><div class="tile" role="img" aria-label="Illuminated Crowns wall sign" style="--tile:url('assets/crowns-wall-sign.jpg')"></div></section>
+    <section class="cta"><div class="eyebrow">Ready when you are</div><h2>Choose your location.<br>Choose your barber.</h2><p>Send your request, then call or text us to confirm the time directly.</p><button class="button" onclick="openBooking()">Start your request</button></section>
+  </main>
+  <footer><a class="footer__brand" href="#top" aria-label="Crowns home"><img class="site-brand__logo" src="assets/crowns-logo-round.jpg" alt="Crowns Hair Salon &amp; BarberShop"></a><p>Hair Salon &amp; BarberShop · Lindenwood &amp; Nostrand</p><p>© 2026 Crowns.</p></footer>
+
+  <div class="modal" id="booking" role="dialog" aria-modal="true" aria-label="Book an appointment"><div class="dialog"><button class="close" onclick="closeBooking()" aria-label="Close">×</button>
+    <div class="step active" id="location-step"><div class="eyebrow">Step 1 of 2</div><h2>Choose your location.</h2><div class="booking__choice-grid"><button class="choice" onclick="chooseLocation('Lindenwood')"><strong>Lindenwood</strong><span>1376 Loring Ave, Brooklyn, NY 11208</span></button><button class="choice" onclick="chooseLocation('Nostrand')"><strong>Nostrand</strong><span>Brooklyn, NY 11210</span></button></div></div>
+    <div class="step" id="barber-step"><button class="back" onclick="showStep('location-step')">← Change location</button><div class="eyebrow">Step 2 of 2</div><h2>Choose your barber.</h2><div class="booking__choice-grid"><button class="choice" onclick="chooseBarber('Marcus')"><strong>Marcus</strong><span>Master Barber</span></button><button class="choice" onclick="chooseBarber('Jay')"><strong>Jay</strong><span>Barber</span></button><button class="choice" onclick="chooseBarber('Chris')"><strong>Chris</strong><span>Barber</span></button><button class="choice" onclick="chooseBarber('No preference')"><strong>No preference</strong><span>First available barber</span></button></div></div>
+    <div class="step" id="confirm-step"><button class="back" onclick="showStep('barber-step')">← Change barber</button><div class="eyebrow">Almost there</div><h2>Send your request.</h2><div class="booking__summary" id="summary"></div><p class="booking__instructions">Call us to request an appointment, or send a text with your details already included. Add your preferred date and time before sending.</p><div class="booking__action-grid"><a class="button" id="call" href="tel:+15551234567">Call now</a><a class="button button--outline" id="sms" href="#">Text via SMS</a></div></div>
+  </div></div>
+  <script>
+    let selectedLocation='', selectedBarber='';
+    const steps=['location-step','barber-step','confirm-step'];
+    function showStep(id){steps.forEach(s=>document.getElementById(s).classList.toggle('active',s===id));}
+    function openBooking(location='',barber=''){selectedLocation=location;selectedBarber=barber;document.getElementById('booking').classList.add('show'); if(selectedLocation && selectedBarber){buildMessage();showStep('confirm-step')}else if(selectedLocation){showStep('barber-step')}else if(selectedBarber){showStep('location-step')}else{showStep('location-step')}}
+    function closeBooking(){document.getElementById('booking').classList.remove('show');}
+    function chooseLocation(location){selectedLocation=location;if(selectedBarber){buildMessage();showStep('confirm-step')}else showStep('barber-step');}
+    function chooseBarber(barber){selectedBarber=barber;buildMessage();showStep('confirm-step');}
+    function buildMessage(){const message=`Hi Crowns! I'd like to book an appointment.\n\nLocation: ${selectedLocation}\nBarber: ${selectedBarber}\nService: Haircut\nPreferred date: \nPreferred time: `;document.getElementById('summary').innerHTML=`<b>Location:</b> ${selectedLocation}<br><b>Barber:</b> ${selectedBarber}<br><b>Service:</b> Haircut`;document.getElementById('sms').href='sms:+15551234567?body='+encodeURIComponent(message);}
+    document.getElementById('booking').addEventListener('click',e=>{if(e.target.id==='booking')closeBooking()}); document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBooking()});
+  </script>
 </body>
 </html>
