@@ -4,14 +4,14 @@ const mobileMenu = document.getElementById('mobile-menu');
 let selectedLocation = '';
 let selectedBarber = '';
 
-// Temporary contact records. Replace these values with confirmed business numbers.
+// Contact records. Tim's Lindenwood number is confirmed; replace remaining placeholders when available.
 const locationPhones = {
   Lindenwood: '+15551234567',
   Nostrand: '+15559876543'
 };
 
 const barberPhones = {
-  Marcus: '+15552010847',
+  Tim: '+13476834575',
   Jay: '+15552010848',
   Chris: '+15552010849'
 };
